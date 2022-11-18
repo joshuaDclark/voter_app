@@ -24,7 +24,7 @@
         <div class="w-2/3 relative">
             <input type="search" placeholder="Find an idea"
                    class="w-full rounded-xl bg-white border-non placeholder-gray-900 px-4 py-2 pl-8">
-            <div class="absolute top-0 flex items-center h-full ml-2">
+            <div class="absolute top-0 flex items-center h-full ml-24">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
