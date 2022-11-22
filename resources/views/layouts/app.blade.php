@@ -9,6 +9,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <livewire:styles />
 
 
     <!-- Fonts -->
@@ -151,6 +152,7 @@
 
 
 </main>
+<livewire:scripts />
 
 </body>
 </html>
