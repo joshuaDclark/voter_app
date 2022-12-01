@@ -15,6 +15,7 @@ class IdeaShow extends Component
     {
         $this->idea = $idea;
         $this->votesCount = $votesCount;
+        $this->hasVoted = $idea->isVotedByUser(auth()->user());
     }
 
 

@@ -68,14 +68,23 @@
 
                         <div class="flex items-center md:hidden mt-4 md:mt-0">
                             <div class="bg-gray-100 text-center rounded-xl h-10 px-4 py-2 pr-8">
-                                <div class="text-sm font-bold leading-none">{{ $votesCount }}</div>
+                                <div class="text-sm font-bold leading-none @if($hasVoted) text-blue @endif">{{ $votesCount }}</div>
                                 <div class="text-xxs font-semibold leading-none text-gray-400">Votes</div>
                             </div>
+                            @if($hasVoted)
+
+
+                            @else
+
+
+
+
+
                             <button
-                                class="w-20 bg-gray-200 border border-gray-200 font-bold text-xxs uppercase rounded-xl hover:border-gray-400 transition duration-15- ease-in px-4 py-3 -mx-5">
+                                class="w-20 text-white bg-blue border border-blue font-bold text-xxs uppercase rounded-xl hover:border-gray-400 transition duration-15- ease-in px-4 py-3 -mx-5">
                                 Vote
                             </button>
-
+                            @endif
                         </div>
                     </div>
                 </div>
