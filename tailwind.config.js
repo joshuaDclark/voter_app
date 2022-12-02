@@ -9,6 +9,14 @@ module.exports = {
         './resources/views/**/*.blade.php',
     ],
 
+    safelist: [
+        'bg-purple',
+        'bg-yellow',
+        'bg-green',
+        'bg-red',
+        'bg-gray-200'
+    ],
+
     theme: {
         extend: {
             colors: {
