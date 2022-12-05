@@ -72,4 +72,12 @@ class User extends Authenticatable
             .'.png';
     }
 
+    public function isAdmin()
+    {
+        return in_array($this->email, [
+           'mrjoshuadclark@gmail.com',
+            'ccarolinadev@gmail.com'
+        ]);
+    }
+
 }
