@@ -36,8 +36,6 @@ class IdeaShow extends Component
             $this->hasVoted = true;
         }
 
-
-
     }
 
 
