@@ -6,13 +6,12 @@ use App\Models\Category;
 use App\Models\Idea;
 use App\Models\Status;
 use App\Models\Vote;
-use Livewire\WithPagination;
 use Livewire\Component;
 
 class Ideasindex extends Component
 {
 
-    use WithPagination;
+
 
     public $status;
     public $category;
@@ -43,7 +42,7 @@ class Ideasindex extends Component
 
     public function queryStringUpdatedStatus($newStatus)
     {
-        $this->resetPage();
+//        $this->resetPage();
         $this->status = $newStatus;
     }
 
