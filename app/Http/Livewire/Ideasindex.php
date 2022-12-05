@@ -7,14 +7,15 @@ use App\Models\Idea;
 use App\Models\Status;
 use App\Models\Vote;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Ideasindex extends Component
 {
-
-
+    use WithPagination;
 
     public $status;
     public $category;
+//    public $page;
 
 
     protected $queryString = [
@@ -42,8 +43,9 @@ class Ideasindex extends Component
 
     public function queryStringUpdatedStatus($newStatus)
     {
-//        $this->resetPage();
+        $this->resetPage();
         $this->status = $newStatus;
+//        $this->page = 1;
     }
 
 
@@ -68,8 +70,10 @@ class Ideasindex extends Component
                 ])
                 ->withCount('votes')
                 ->orderBy('id', 'desc')
-                ->simplePaginate(Idea::PAGINATION_COUNT),
+                ->simplePaginate(Idea::PAGINATION_COUNT)
+                ->withQueryString(),
             'categories' => $categories,
         ]);
     }
+
 }
