@@ -3,7 +3,10 @@
     x-data="{ isOpen: false }"
     x-show="isOpen"
     @keydown.escape.window="isOpen = false"
-    @custom-show-edit-modal.window="isOpen = true"
+    @custom-show-edit-modal.window="
+        isOpen = true
+        $nextTick(() => $refs.title.focus())
+    "
     x-init="
         window.livewire.on('ideaWasUpdated', () => {
             isOpen = false
