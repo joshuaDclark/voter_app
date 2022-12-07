@@ -42,6 +42,7 @@
                                 @click.away="isOpen = false"
                                 @keydown.escape.window="isOpen = false"
                             >
+                                @can('update', $idea)
                                 <li>
                                     <a
                                         href="#"
@@ -54,6 +55,7 @@
                                         Edit Idea
                                     </a>
                                 </li>
+                                @endcan
                                 <li><a href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3">Delete Idea</a></li>
                                 <li><a href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3">Delete Post</a></li>
                             </ul>
@@ -104,6 +106,7 @@
                     @click.away="isOpen = false"
                     @keydown.escape.window="isOpen = false"
                 >
+
                     <form action="#" class="space-y-4 px-4 py-6">
                         <div>
                             <textarea name="post_comment" id="post_comment" cols="30" rows="4" class="w-full text-sm bg-gray-100 rounded-xl placeholder-gray-900 border-none px-4 py-2" placeholder="Go ahead, don't be shy. Share your thoughts..."></textarea>
