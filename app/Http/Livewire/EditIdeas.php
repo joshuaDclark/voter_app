@@ -43,7 +43,7 @@ class EditIdeas extends Component
             'description' => $this->description,
         ]);
 
-        $this->emit('ideaWasUpdated');
+        $this->emit('ideaWasUpdated', 'Idea was updated successfully!');
     }
 
 
