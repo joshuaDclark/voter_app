@@ -14,6 +14,10 @@ class Idea extends Model
 
     protected $guarded = [];
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 
     use Sluggable;
 
