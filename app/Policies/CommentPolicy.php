@@ -14,7 +14,7 @@ class CommentPolicy
      * Determine whether the user can view any models.
      *
      * @param  \App\Models\User  $user
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return mixed
      */
     public function viewAny(User $user)
     {
@@ -26,7 +26,7 @@ class CommentPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return mixed
      */
     public function view(User $user, Comment $comment)
     {
@@ -37,7 +37,7 @@ class CommentPolicy
      * Determine whether the user can create models.
      *
      * @param  \App\Models\User  $user
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return mixed
      */
     public function create(User $user)
     {
@@ -49,11 +49,11 @@ class CommentPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return mixed
      */
     public function update(User $user, Comment $comment)
     {
-        //
+        return $user->id === (int) $comment->user_id;
     }
 
     /**
@@ -61,7 +61,7 @@ class CommentPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return mixed
      */
     public function delete(User $user, Comment $comment)
     {
@@ -73,7 +73,7 @@ class CommentPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return mixed
      */
     public function restore(User $user, Comment $comment)
     {
@@ -85,7 +85,7 @@ class CommentPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Auth\Access\Response|bool
+     * @return mixed
      */
     public function forceDelete(User $user, Comment $comment)
     {

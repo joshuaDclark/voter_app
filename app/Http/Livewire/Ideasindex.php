@@ -109,7 +109,6 @@ class Ideasindex extends Component
                 ->orderBy('id', 'desc')
                 ->simplePaginate()
                 ->withQueryString(),
-                ->withQueryString(),
             'categories' => $categories,
         ]);
     }
