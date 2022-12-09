@@ -31,17 +31,26 @@
     left: -40px;
 }
 
+.is-status-update.comment-container:last-child::after {
+    left: -41px;
+}
+
 /* remove last vertical line */
 .comment-container:last-child::after {
     position:absolute;
     display: block;
     top: 60px;
-    left: -38px;
+    left: -40px;
     content:"";
     width:3px;
     height:calc(100% - 60px);
     background: theme('colors.gray-background');
 }
+
+is-status-update.comment-container:last-child::after {
+    left: -41px;
+}
+
 
 .is-status-update::before {
     position:absolute;

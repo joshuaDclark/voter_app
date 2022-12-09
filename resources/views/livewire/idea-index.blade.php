@@ -48,7 +48,7 @@
                     <div>{{ $idea->created_at->diffForHumans() }}</div>
                     <div>&bull;</div>
                     <div>{{ $idea->category->name }}</div>
-                    <div class="text-gray-900">{{ $idea->comments_count }} comments</div>
+                    <div wire:ignore class="text-gray-900">{{ $idea->comments_count }} comments</div>
                 </div>
                 <div
                     x-data="{ isOpen:false }"

@@ -14,7 +14,7 @@ class IdeaComment extends Component
         'commentWasUpdated',
         'commentWasMarkedAsSpam',
         'commentWasMarkedAsNotSpam',
-    ];
+        'statusWasUpdated'];
 
     public function commentWasUpdated()
     {
