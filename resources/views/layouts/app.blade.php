@@ -75,50 +75,12 @@
             <div class="text-center px-6 py-2 pt-6">
                 <h3 class="font-semibold text-base">Add an idea</h3>
                 <p class="text-xs mt-4">
-                    @auth
-)
-                        Let us know what you would like and we'll take a look over!
 
-                    @else
-                        Please login to create an idea.
-                    @endauth
                 </p>
             </div>
 
-            @auth
 
                 <livewire:create-idea />
-
-            @else
-                <div class="my-6 text-center">
-
-                    <a
-                        href="{{ route('login') }}"
-                        class="inline-block justify-center w-1/2 h-11 text-xs bg-gray-200 font-semibold rounded-xl border bg-blue text-white transition duration-150 ease-in px6 py-3 mt-4">
-
-
-                        <span class="ml-1">Login</span>
-
-                    </a>
-
-                    <a
-                        href="{{ route('register') }}"
-                        class="inline-block justify-center w-1/2 h-11 text-xs bg-gray-200 font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px6 py-3 mt-4">
-
-
-
-
-                            Sign Up
-
-                    </a>
-
-
-                </div>
-
-
-
-            @endauth
-
 
 
         </div>
