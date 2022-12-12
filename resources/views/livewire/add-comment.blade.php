@@ -6,7 +6,6 @@
         })
 
         Livewire.hook('message.processed', (message, component) => {
-            {{-- if (message.updateQueue[0].method === 'gotoPage' || message.updateQueue[0].method === 'nextPage' || message.updateQueue[0].method === 'previousPage') { --}}
             if (['gotoPage', 'previousPage', 'nextPage'].includes(message.updateQueue[0].method)) {
                 const firstComment = document.querySelector('.comment-container:first-child')
                 firstComment.scrollIntoView({ behavior: 'smooth'})
@@ -22,6 +21,14 @@
             }
         })
 
+        @if (session('scrollToComment'))
+            const commentToScrollTo = document.querySelector('#comment-{{ session('scrollToComment') }}')
+            commentToScrollTo.scrollIntoView({ behavior: 'smooth'})
+            commentToScrollTo.classList.add('bg-green-50')
+            setTimeout(() => {
+                commentToScrollTo.classList.remove('bg-green-50')
+            }, 5000)
+        @endif
         "
 
     class="relative"
